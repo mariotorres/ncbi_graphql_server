@@ -39,6 +39,7 @@ class ncbiResponse {
 
         return rp.get(opts).then((data)=>{
             //console.log(data);
+            //mejora: remover comentarios del archivo fasta
             return data.split("\n").slice(1).join("\n");
         }).catch((error)=>{
             console.log(error);
